@@ -1,6 +1,6 @@
 <?php
 
-namespace Bogardo\Mailgun\Facades;
+namespace Connecteev\Mailgun\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

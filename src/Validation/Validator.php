@@ -1,6 +1,6 @@
 <?php
 
-namespace Bogardo\Mailgun\Validation;
+namespace Connecteev\Mailgun\Validation;
 
 use Mailgun\Mailgun;
 

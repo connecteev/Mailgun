@@ -1,4 +1,4 @@
-# Bogardo/Mailgun
+# Connecteev/Mailgun
 
 A package for the Laravel Framework for sending emails using the Mailgun API.
 The syntax for sending emails is very similar to the Laravel Mail component.
@@ -15,11 +15,6 @@ This packages fills that gap and supports most of the mail features offered by M
 * Custom data/headers
 
 > This package makes use of the [mailgun-php](https://github.com/mailgun/mailgun-php) library.
-
-[![Total Downloads](https://poser.pugx.org/bogardo/mailgun/downloads.png)](https://packagist.org/packages/bogardo/mailgun)
-[![Monthly Downloads](https://poser.pugx.org/bogardo/mailgun/d/monthly.png)](https://packagist.org/packages/bogardo/mailgun)
-[![License](https://poser.pugx.org/bogardo/mailgun/license)](https://packagist.org/packages/bogardo/mailgun)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Bogardo/Mailgun?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ##### Basic Example
 
@@ -40,14 +35,14 @@ Mailgun::send('emails.invoice', $data, function ($message) {
 ## Version Compatibility
 
 This package currently supports Laravel 5.1 and up.
-For older versions of Laravel please refer to [older versions](https://github.com/Bogardo/Mailgun/releases) of this package.
+For older versions of Laravel please refer to [older versions](https://github.com/Connecteev/Mailgun/releases) of this package.
 
 ## Installation
 
 Install the package via composer
 
 ```bash
-composer require bogardo/mailgun
+composer require connecteev/mailgun
 ```
 
 If using Laravel 5.1 to 5.4, Register the ServiceProvider and (optionally) the Facade
@@ -57,7 +52,7 @@ If using Laravel 5.1 to 5.4, Register the ServiceProvider and (optionally) the F
 
 'providers' => [
     ...
-    Bogardo\Mailgun\MailgunServiceProvider::class
+    Connecteev\Mailgun\MailgunServiceProvider::class
 
 ];
 
@@ -65,14 +60,14 @@ If using Laravel 5.1 to 5.4, Register the ServiceProvider and (optionally) the F
 
 'aliases' => [
 	...
-    'Mailgun' => Bogardo\Mailgun\Facades\Mailgun::class
+    'Mailgun' => Connecteev\Mailgun\Facades\Mailgun::class
 ],
 ```
 
 Next, publish the config file with the following `artisan` command.<br />
 
 ```bash
-php artisan vendor:publish --provider="Bogardo\Mailgun\MailgunServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Connecteev\Mailgun\MailgunServiceProvider" --tag="config"
 ```
 
 or if using Laravel 5.5 <br />
@@ -298,7 +293,7 @@ Recipient Variables are custom variables that you define, which you can then ref
 ###### Examples
 
 ```php
-use Bogardo\Mailgun\Mail\Message;
+use Connecteev\Mailgun\Mail\Message;
 
 Mailgun::send('email.batch', $data, function(Message $message){
     $message->to([
@@ -611,7 +606,7 @@ Mailgun::send('emails.welcome', $data, function ($message) {
 ## Dependency Injection
 
 All the examples in this document are using the `Mailgun` facade.
-The Mailgun service is registered in the Container as `mailgun` but you can also use the Interface `Bogardo\Mailgun\Contracts\Mailgun` for dependency injection in your app.
+The Mailgun service is registered in the Container as `mailgun` but you can also use the Interface `Connecteev\Mailgun\Contracts\Mailgun` for dependency injection in your app.
 
 #### Example
 
@@ -622,14 +617,14 @@ class CustomController extends Controller
 {
 
     /**
-     * @var \Bogardo\Mailgun\Contracts\Mailgun
+     * @var \Connecteev\Mailgun\Contracts\Mailgun
      */
     protected $mailgun;
 
     /**
-     * @param \Bogardo\Mailgun\Contracts\Mailgun $mailgun
+     * @param \Connecteev\Mailgun\Contracts\Mailgun $mailgun
      */
-    public function __construct(\Bogardo\Mailgun\Contracts\Mailgun $mailgun)
+    public function __construct(\Connecteev\Mailgun\Contracts\Mailgun $mailgun)
     {
         $this->mailgun = $mailgun;
     }

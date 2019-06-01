@@ -1,8 +1,8 @@
 <?php
 
-namespace Bogardo\Mailgun;
+namespace Connecteev\Mailgun;
 
-use Bogardo\Mailgun\Contracts\Mailgun as MailgunContract;
+use Connecteev\Mailgun\Contracts\Mailgun as MailgunContract;
 use Illuminate\Support\ServiceProvider;
 use Mailgun\Mailgun as MailgunApi;
 

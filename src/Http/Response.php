@@ -1,6 +1,6 @@
 <?php
 
-namespace Bogardo\Mailgun\Http;
+namespace Connecteev\Mailgun\Http;
 
 use stdClass;
 

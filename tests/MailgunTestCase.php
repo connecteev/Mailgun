@@ -63,7 +63,7 @@ class MailgunTestCase extends TestCase
      */
     protected function getPackageProviders($app)
     {
-        return ['Bogardo\Mailgun\MailgunServiceProvider'];
+        return ['Connecteev\Mailgun\MailgunServiceProvider'];
     }
 
     /**
@@ -71,7 +71,7 @@ class MailgunTestCase extends TestCase
      */
     protected function getPackageAliases($app)
     {
-        return ['Mailgun' => 'Bogardo\Mailgun\Facades\Mailgun'];
+        return ['Mailgun' => 'Connecteev\Mailgun\Facades\Mailgun'];
     }
 
     protected function getSuccessResponse()
